@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">groupcalendaapp</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="login">Login</string>
+    <string name="login_name">login name</string>
+    <string name="password">Password</string>
+
+</resources>
