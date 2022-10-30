@@ -4,5 +4,13 @@
     <string name="login">Login</string>
     <string name="login_name">login name</string>
     <string name="password">Password</string>
+    <string name="month">Month</string>
+    <string name="Sunday">Sun</string>
+    <string name="Monday">Mon</string>
+    <string name="Tuesday">Tues</string>
+    <string name="Wednesday">Wed</string>
+    <string name="Thursday">Thurs</string>
+    <string name="Friday">Fri</string>
+    <string name="Saturday">Sat</string>
 
 </resources>
