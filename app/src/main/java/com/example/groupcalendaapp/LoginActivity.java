@@ -28,6 +28,7 @@ public class LoginActivity extends AppCompatActivity {
         passwordTextEdited = (EditText) findViewById(R.id.textPassword);
         emailTextEdited.setText(emailText);
         Button loginButton = (Button) findViewById(R.id.loginButton);
+
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

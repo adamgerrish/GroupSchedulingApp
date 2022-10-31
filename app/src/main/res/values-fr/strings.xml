@@ -5,4 +5,7 @@
     <string name="login">Connexion</string>
     <string name="login_name">nom de connexion</string>
     <string name="password">mot de passe</string>
+    <string name="calButton">Calendrier</string>
+    <string name="back"><![CDATA[<-]]></string>
+    <string name="next"><![CDATA[->]]></string>
 </resources>

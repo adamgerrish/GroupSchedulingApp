@@ -14,4 +14,10 @@
         android:text="Jane Doe"
         android:textSize="36dp" />
 
+    <Button
+        android:id="@+id/buttonCalendar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/calButton" />
+
 </LinearLayout>

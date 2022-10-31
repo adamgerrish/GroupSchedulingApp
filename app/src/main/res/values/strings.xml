@@ -4,5 +4,8 @@
     <string name="login">Login</string>
     <string name="login_name">login name</string>
     <string name="password">Password</string>
+    <string name="calButton">Calendar</string>
+    <string name="back"><![CDATA[<-]]></string>
+    <string name="next"><![CDATA[->]]></string>
 
 </resources>
