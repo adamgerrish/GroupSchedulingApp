@@ -10,4 +10,5 @@
     <string name="next"><![CDATA[->]]></string>
     <string name="weekly">Hebdomadaire</string>
     <string name="new_event">Nouvel évènement</string>
+    <string name="name">Le Nom</string>
 </resources>

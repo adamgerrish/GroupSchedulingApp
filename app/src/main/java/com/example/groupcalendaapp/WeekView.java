@@ -22,7 +22,7 @@ public class WeekView extends AppCompatActivity implements CalendarAdapter.onIte
 
     private TextView monthYrTxt;
     private RecyclerView calRecyclerView;
-    private ListView eventListView;
+   // private ListView eventListView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,13 +34,13 @@ public class WeekView extends AppCompatActivity implements CalendarAdapter.onIte
     private void initWidgets() {
         calRecyclerView = findViewById(R.id.calendarRecyclerView);
         monthYrTxt = findViewById(R.id.monthYearTV);
-        eventListView = findViewById(R.id.eventListView);
+        //eventListView = findViewById(R.id.eventListView);
     }
     private void setWeekView() {
         monthYrTxt.setText(monthYearFromDate(CalUtils.selectedDate));
         ArrayList<LocalDate> days = daysInWeek(CalUtils.selectedDate);
 
-        CalendarAdapter calendarAdapter = new CalendarAdapter(days, this);
+        CalendarAdapter calendarAdapter = new CalendarAdapter(days,this::onItemClick);
         RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getApplicationContext(), 7);
         calRecyclerView.setLayoutManager(layoutManager);
         calRecyclerView.setAdapter(calendarAdapter);
@@ -56,11 +56,14 @@ public class WeekView extends AppCompatActivity implements CalendarAdapter.onIte
         CalUtils.selectedDate = CalUtils.selectedDate.plusWeeks(1);
         setWeekView();
     }
+
+    @Override
     public void onItemClick(int position, LocalDate date){
         CalUtils.selectedDate = date;
         setWeekView();
     }
 
+    @Override
     protected void onResume(){
         super.onResume();
         setEventAdapter();
