@@ -7,5 +7,7 @@
     <string name="calButton">Calendar</string>
     <string name="back"><![CDATA[<-]]></string>
     <string name="next"><![CDATA[->]]></string>
+    <string name="weekly">Weekly</string>
+    <string name="new_event">New Event</string>
 
 </resources>
