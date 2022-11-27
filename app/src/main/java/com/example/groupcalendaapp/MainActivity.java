@@ -1,5 +1,7 @@
 package com.example.groupcalendaapp;
 
+import static com.example.groupcalendaapp.CalUtils.monthYearFromDate;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -31,14 +33,13 @@ public class MainActivity extends AppCompatActivity implements CalendarAdapter.O
     }
 
 
-
     private void initWidgets() {
         calendarRecyclerView = findViewById(R.id.calendarRecyclerView);
         monthYearText = findViewById(R.id.monthYearTV);
     }
 
     private void setMonthView() {
-        monthYearText.setText(CalUtils.monthYearFromDate(CalUtils.selectedDate));
+        monthYearText.setText(monthYearFromDate(CalUtils.selectedDate));
         ArrayList<String> daysInMonth = CalUtils.daysInMonthArray(CalUtils.selectedDate);
         CalendarAdapter calendarAdapter = new CalendarAdapter(daysInMonth, this);
         RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getApplicationContext(), 7);
