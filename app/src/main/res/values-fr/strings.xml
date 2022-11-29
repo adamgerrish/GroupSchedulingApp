@@ -11,4 +11,6 @@
     <string name="weekly">Hebdomadaire</string>
     <string name="new_event">Nouvel évènement</string>
     <string name="name">Le Nom</string>
+    <string name="eventTime">L heure</string>
+    <string name="eventDate">La Date</string>
 </resources>

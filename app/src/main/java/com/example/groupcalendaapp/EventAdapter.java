@@ -17,20 +17,22 @@ public class EventAdapter extends ArrayAdapter<Event> {
             super(context, 0, events);
         }
 
+
         @NonNull
         @Override
-        public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent)
-        {
+        public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent ){
             Event event = getItem(position);
 
-            if (convertView == null)
-                convertView = LayoutInflater.from(getContext()).inflate(R.layout.event_cell, parent, false);
+            if (convertView==null){
+                convertView = LayoutInflater.from(getContext()).inflate(R.layout.event_cell,parent,false);
+                TextView eventCellTextView = convertView.findViewById(R.id.eventCellTextView);
+                String eventTitle = event.getName()+" "+CalUtils.formatTime(event.getTime());
+                eventCellTextView.setText(eventTitle);
 
-            TextView eventCellTV = convertView.findViewById(R.id.eventCellTV);
-
-            String eventTitle = event.getName() +" "+ CalendarUtils.formattedTime(event.getTime());
-            eventCellTV.setText(eventTitle);
+            }
             return convertView;
         }
+
+
     }
 

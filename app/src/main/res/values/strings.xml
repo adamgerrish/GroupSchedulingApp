@@ -10,5 +10,7 @@
     <string name="weekly">Weekly</string>
     <string name="new_event">New Event</string>
     <string name="name">Name</string>
+    <string name="eventTime">Time</string>
+    <string name="eventDate">Date</string>
 
 </resources>

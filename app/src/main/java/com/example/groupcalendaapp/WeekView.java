@@ -18,11 +18,11 @@ import java.util.ArrayList;
 
 import static com.example.groupcalendaapp.CalUtils.daysInWeek;
 
-public class WeekView extends AppCompatActivity implements CalendarAdapter.onItemListener{
+public class WeekView extends AppCompatActivity implements CalendarAdapter.OnItemListener{
 
     private TextView monthYrTxt;
     private RecyclerView calRecyclerView;
-   // private ListView eventListView;
+    private ListView eventListView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +34,7 @@ public class WeekView extends AppCompatActivity implements CalendarAdapter.onIte
     private void initWidgets() {
         calRecyclerView = findViewById(R.id.calendarRecyclerView);
         monthYrTxt = findViewById(R.id.monthYearTV);
-        //eventListView = findViewById(R.id.eventListView);
+        eventListView = findViewById(R.id.eventListView);
     }
     private void setWeekView() {
         monthYrTxt.setText(monthYearFromDate(CalUtils.selectedDate));
@@ -63,6 +63,8 @@ public class WeekView extends AppCompatActivity implements CalendarAdapter.onIte
         setWeekView();
     }
 
+
+
     @Override
     protected void onResume(){
         super.onResume();
@@ -70,11 +72,13 @@ public class WeekView extends AppCompatActivity implements CalendarAdapter.onIte
     }
 
     private void setEventAdapter() {
-        ArrayList<Event> dailyEvent = Event.eventDate(CalUtils.selectedDate);
-        EventAdapter eventAdapter = new EventAdapter (getApplicationContext(), dailyEvent);
-        eventListView.setAdapter(eventAdapter);
+         ArrayList<Event> dailyEvent = Event.eventsDate(CalUtils.selectedDate);
+         EventAdapter eventAdapter = new EventAdapter (getApplicationContext(), dailyEvent);
+         eventListView.setAdapter(eventAdapter);
     }
     public void newEventAction(View view) {
         startActivity(new Intent (this,EditEvent.class));
     }
+
+
 }
