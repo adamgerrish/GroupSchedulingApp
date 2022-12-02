@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements CalendarAdapter.O
         initWidgets();
         CalUtils.selectedDate = LocalDate.now();
         setMonthView();
+        Toast.makeText(MainActivity.this,"Hustle -> Seize the Day", Toast.LENGTH_LONG).show();
     }
 
 
