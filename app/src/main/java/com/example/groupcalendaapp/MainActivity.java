@@ -48,8 +48,6 @@ public class MainActivity extends AppCompatActivity implements CalendarAdapter.O
 
     }
 
-
-
     public void previousMonthAction (View view){
         CalUtils.selectedDate = CalUtils.selectedDate.minusMonths(1);
         setMonthView();
