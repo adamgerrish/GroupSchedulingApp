@@ -6,8 +6,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.content.Intent;
@@ -24,18 +27,29 @@ public class WeekView extends AppCompatActivity implements CalendarAdapter.OnIte
     private RecyclerView calRecyclerView;
     private ListView eventListView;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_week_view);
         initWidgets();
+        loadDbToMemory();
         setWeekView();
+        clickableList();
     }
+
     private void initWidgets() {
         calRecyclerView = findViewById(R.id.calendarRecyclerView);
         monthYrTxt = findViewById(R.id.monthYearTV);
         eventListView = findViewById(R.id.eventListView);
     }
+
+    private void loadDbToMemory(){
+        EventDatabase edb = EventDatabase.instanceOfDb(this);
+        edb.populateEvents();
+    }
+
     private void setWeekView() {
         monthYrTxt.setText(monthYearFromDate(CalUtils.selectedDate));
         ArrayList<LocalDate> days = daysInWeek(CalUtils.selectedDate);
@@ -46,6 +60,20 @@ public class WeekView extends AppCompatActivity implements CalendarAdapter.OnIte
         calRecyclerView.setAdapter(calendarAdapter);
         setEventAdapter();
 
+    }
+
+    private void clickableList() {
+
+        eventListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Event selected = (Event) eventListView.getItemAtPosition(i);
+                Intent editEvent = new Intent(getApplicationContext(), EditEvent.class);
+                editEvent.putExtra(Event.EXTRA,selected.getId());
+                startActivity(editEvent);
+
+            }
+        });
     }
 
     public void previousWeekAction(View view) {
@@ -62,8 +90,6 @@ public class WeekView extends AppCompatActivity implements CalendarAdapter.OnIte
         CalUtils.selectedDate = date;
         setWeekView();
     }
-
-
 
     @Override
     protected void onResume(){

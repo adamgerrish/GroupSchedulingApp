@@ -50,15 +50,49 @@
         android:textColor="@color/black"/>
 
     <Button
+        android:id="@+id/changeTime"
         android:layout_marginTop="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Save"
+        android:text="Change time and save"
         android:textColor= "@color/blue"
         android:textStyle="bold"
         android:textSize="20sp"
-        android:onClick="saveEventAction"
         android:layout_gravity="center"
+        />
+
+<!--    <Button-->
+<!--        android:id="@+id/saveButton"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Save"-->
+<!--        android:textColor= "@color/blue"-->
+<!--        android:textStyle="bold"-->
+<!--        android:textSize="20sp"-->
+<!--        android:onClick="saveEventAction"-->
+<!--        android:layout_gravity="center"-->
+<!--        />-->
+
+    <TimePicker
+        android:id="@+id/timePicker1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        />
+
+    <Button
+        android:id="@+id/delete"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+        android:textColor= "@color/red"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_gravity="center"
+        android:onClick="deleteEvent"
         />
 
 </LinearLayout>
