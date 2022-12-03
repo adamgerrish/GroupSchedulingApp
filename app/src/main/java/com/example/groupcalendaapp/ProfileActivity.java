@@ -21,7 +21,7 @@ public class ProfileActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(ProfileActivity.this,MainActivity.class);
+                Intent intent = new Intent(ProfileActivity.this, CalendarActivity.class);
                 startActivity(intent);
 
             }
