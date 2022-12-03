@@ -37,7 +37,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/button_login"
+            android:id="@+id/button_todo"
             android:text="To do list"
             android:layout_marginTop="50dp"
             android:layout_below="@id/textView_main_head"
@@ -46,9 +46,9 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/button_register"
+            android:id="@+id/button_calendar"
             android:text="calendar"
-            android:layout_below="@id/button_login"
+            android:layout_below="@id/button_todo"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"/>
         <Button
@@ -56,7 +56,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/button_1"
             android:text="Pomodoro"
-            android:layout_below="@id/button_register"
+            android:layout_below="@id/button_calendar"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"/>
         <Button

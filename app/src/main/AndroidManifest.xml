@@ -12,6 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Groupcalendaapp"
         tools:targetApi="31">
+
+        <activity
+            android:name=".EditEvent"
+            android:exported="false" />
+        <activity
+            android:name=".WeekView"
+            android:exported="false" />
         <activity
             android:name=".TodoMain"
             android:exported="true">
@@ -22,7 +29,7 @@
         </activity>
 
         <activity
-            android:name=".ProfileActivity"
+            android:name=".MainActivity"
             android:exported="false"
             android:parentActivityName=".LoginActivity">
             <meta-data
@@ -40,7 +47,7 @@
 
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".CalendarActivity"
             android:exported="true"
             android:parentActivityName=".LoginActivity" />
     </application>

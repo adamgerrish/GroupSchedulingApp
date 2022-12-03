@@ -28,6 +28,7 @@ public class LoginActivity extends AppCompatActivity {
         passwordTextEdited = (EditText) findViewById(R.id.textPassword);
         emailTextEdited.setText(emailText);
         Button loginButton = (Button) findViewById(R.id.loginButton);
+
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -35,7 +36,7 @@ public class LoginActivity extends AppCompatActivity {
                 shPrefEdit.putString("DefaultEmail",emailTextEdited.getText().toString());
                 if(isValidEmailId(emailTextEdited.getText().toString().trim()) && passwordTextEdited.getText().toString().isEmpty() == false){
                     shPrefEdit.commit();
-                    Intent intent = new Intent(LoginActivity.this,ProfileActivity.class);
+                    Intent intent = new Intent(LoginActivity.this,MainActivity.class);
                     startActivity(intent);
                 }else{
                     emailTextEdited.setText("Invalid Email or Password");

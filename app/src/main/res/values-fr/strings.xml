@@ -5,12 +5,12 @@
     <string name="login">Connexion</string>
     <string name="login_name">nom de connexion</string>
     <string name="password">mot de passe</string>
-     <string name="month">le mois</string>
-    <string name="Sunday">Dimanche</string>
-    <string name="Monday">Lundi</string>
-    <string name="Tuesday">Mardi</string>
-    <string name="Wednesday">Mercredi</string>
-    <string name="Thursday">Jeudi</string>
-    <string name="Friday">Vendredi</string>
-    <string name="Saturday">Samedi</string>
+    <string name="calButton">Calendar</string>
+    <string name="back"><![CDATA[<-]]></string>
+    <string name="next"><![CDATA[->]]></string>
+    <string name="weekly">Weekly</string>
+    <string name="new_event">New Event</string>
+    <string name="name">Name</string>
+    <string name="eventTime">Time</string>
+    <string name="eventDate">Date</string>
 </resources>
