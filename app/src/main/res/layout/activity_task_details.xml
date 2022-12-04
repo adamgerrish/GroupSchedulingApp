@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TaskDetails">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/todoDetailsToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/idk"
+        android:minHeight="?actionBarSize"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "TASK"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            android:textColor="@color/light_gray"
+            android:layout_gravity="center">
+
+        </TextView>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <Button
+        android:id="@+id/saveTaskButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/idk"
+        android:textColor="@color/light_gray"
+        android:text="Save Task"
+        >
+
+    </Button>
+
+
+    <TextView
+        android:id="@+id/taskTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Task: "
+        android:textSize="25sp"
+        app:layout_constraintTop_toBottomOf="@id/todoDetailsToolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="10dp"
+        >
+
+    </TextView>
+
+    <EditText
+        android:id="@+id/taskName"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        app:layout_constraintLeft_toRightOf="@id/taskTV"
+        app:layout_constraintTop_toBottomOf="@id/todoDetailsToolbar"
+
+        tools:ignore="SpeakableTextPresentCheck">
+
+    </EditText>
+
+    <TextView
+        android:id="@+id/difficultyTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Difficulty: "
+        android:textSize="25sp"
+        app:layout_constraintTop_toBottomOf="@id/taskTV"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="150dp"
+        android:layout_marginStart="10dp"
+        >
+    </TextView>
+
+    <Spinner
+        android:id="@+id/spinner_difficulty"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        app:layout_constraintLeft_toRightOf="@id/difficultyTV"
+        app:layout_constraintTop_toBottomOf="@id/taskName"
+        tools:ignore="SpeakableTextPresentCheck">
+
+    </Spinner>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
