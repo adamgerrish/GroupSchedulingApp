@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_margin="16dp"
-        android:text="@string/quote1"
+        android:text="The only way of discovering the limits of the possible is to venture a little way past them into the impossible."
         android:textAlignment="inherit"
         android:textColor="@color/idk"
         android:clickable="true"
