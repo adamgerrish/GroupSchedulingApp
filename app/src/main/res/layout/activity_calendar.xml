@@ -9,6 +9,10 @@
     android:orientation="vertical"
     tools:context=".CalendarActivity">
 
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"/>
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
