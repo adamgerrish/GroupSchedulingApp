@@ -5,28 +5,70 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#1c2120"
     tools:context=".LoginActivity">
 
+    <ImageView
+        android:layout_width="220dp"
+        android:layout_height="206dp"
+        android:layout_gravity="center"
+        android:src="@drawable/hustle" />
+
     <TextView
-        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="casual"
+        android:text="Schedule App"
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login to Continue"
+        android:textSize="20sp"
+        android:layout_gravity="center"
+        android:textColor="@color/white"/>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical"/>
+
+    <TextView
+        android:id="@+id/textView_login"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
         android:text="@string/login" />
 
     <EditText
         android:id="@+id/loginText"
         android:layout_width="match_parent"
-        android:layout_height="57dp"
+        android:layout_height="51dp"
+        android:layout_gravity="center"
+        android:background="@color/white"
         android:ems="10"
         android:hint="@string/login_name"
         android:inputType="textEmailSubject"
-        android:textColor="#757575" />
+        android:textColor="#757575"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp"/>
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/password" />
+        android:textColor="@color/white"
+        android:text="@string/password"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp"/>
 
     <EditText
         android:id="@+id/textPassword"
@@ -35,12 +77,23 @@
         android:ems="10"
         android:inputType="textPassword"
         android:minHeight="48dp"
-        tools:ignore="SpeakableTextPresentCheck" />
+        tools:ignore="SpeakableTextPresentCheck"
+        android:background="@color/white"
+        android:hint="@string/password"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp"/>
 
     <Button
         android:id="@+id/loginButton"
-        android:layout_width="match_parent"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:text="@string/login" />
+        android:text="Login"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"/>
+
+
+
+
+
 
 </LinearLayout>

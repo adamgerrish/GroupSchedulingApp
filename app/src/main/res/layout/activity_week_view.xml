@@ -20,14 +20,10 @@
 
 
         <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_width="20dp"
+            android:layout_height="40dp"
             android:layout_weight="1"
-            android:text="@string/back"
-            android:textColor= "@color/blue"
-
-            android:textStyle="bold"
-            android:textSize="20sp"
+            android:background="@drawable/ic_baseline_arrow_back_ios_new_24"
             android:onClick="previousWeekAction"
             />
 
@@ -47,14 +43,10 @@
 
 
         <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_width="20dp"
+            android:layout_height="40dp"
             android:layout_weight="1"
-            android:text="@string/next"
-            android:textColor= "@color/blue"
-
-            android:textStyle="bold"
-            android:textSize="20sp"
+            android:background = "@drawable/ic_baseline_arrow_forward_ios_24"
             android:onClick="nextWeekAction"/>
     </LinearLayout>
 
