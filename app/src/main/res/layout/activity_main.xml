@@ -54,8 +54,8 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/button_1"
-            android:text="Pomodoro"
+            android:id="@+id/quoteButton"
+            android:text="Motivation"
             android:layout_below="@id/button_calendar"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"/>
@@ -64,7 +64,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/button_2"
             android:text="logout"
-            android:layout_below="@id/button_1"
+            android:layout_below="@id/quoteButton"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"/>
 

@@ -12,6 +12,39 @@
     <string name="name">Name</string>
     <string name="eventTime">Time</string>
     <string name="eventDate">Date</string>
+    <string name="quote1">“The only way of discovering the limits of the possible is to venture a little way past them into the impossible.”
+        <b>\n\n- Arthur C. Clarke</b>
+    </string>
+    <string name="quote2">“Do not fear failure but rather fear not trying.”
+        <b>\n\n- Roy T. Bennett</b>
+    </string>
+    <string name="quote3">“Without ambition one starts nothing. Without work one finishes nothing. The prize will not be sent to you. You have to win it.”
+        <b>\n\n- Ralph Waldo Emerson</b>
+    </string>
+    <string name="quote4">“Action may not always bring happiness, but there is no happiness without action.”
+        <b>\n\n- William James</b>
+    </string>
+    <string name="quote5">“Don\'t fear failure. — Not failure, but low aim, is the crime. In great attempts it is glorious even to fail.”
+        <b>\n\n-Bruce Lee</b>
+    </string>
+    <string name="quote6">“First say to yourself what you would be; and then do what you have to do.”
+        <b>\n\n- Epictetus</b>
+    </string>
+    <string name="quote7">“One resolution I have made, and try always to keep, is this: ‘To rise above little things’.”
+        <b>\n\n- John Burroughs</b>
+    </string>
+    <string name="quote8">“Everything is hard before it is easy”
+        <b>\n\n- Goethe J.W.</b>
+    </string>
+    <string name="quote9">“It\'s not what we do once in a while that shapes our lives. It\'s what we do consistently.”
+        <b>\n\n- Anthony Robbins</b>
+    </string>
+    <string name="quote10">“Act the way you\'d like to be and soon you\'ll be the way you\'d like to act.”
+        <b>\n\n- Bob Dylan</b>
+    </string>
+    <string name="quote11">“Make today worth remembering.”
+        <b>\n\n- Zig Ziglar</b>
+    </string>
 
 
 </resources>

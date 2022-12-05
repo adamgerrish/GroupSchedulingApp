@@ -3,4 +3,11 @@
     <style name="Theme.Groupcalendaapp" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorAccent">@color/blue</item>
     </style>>
+
+    <style name="QuoteSplashScreen" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/light_gray</item>
+        <item name="colorPrimaryDark">@color/idk</item>
+        <item name="colorAccent">@color/blue</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
 </resources>
