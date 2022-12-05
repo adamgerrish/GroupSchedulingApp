@@ -6,58 +6,78 @@
     android:layout_height="match_parent"
     tools:context=".TodoMain">
 
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/idk"
+        android:minHeight="?actionBarSize"
+        app:layout_constraintTop_toTopOf="parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text = "TODO"
+                android:textSize="35sp"
+                android:textStyle="bold"
+                android:textColor="@color/light_gray"
+                android:layout_gravity="center">
+
+            </TextView>
+
+
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+
 
     <EditText
         android:id="@+id/taskName"
-        android:layout_width="0dp"
+        android:layout_width="323dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/taskButton"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="TouchTargetSizeCheck" />
+        app:layout_constraintEnd_toStartOf="@+id/taskButton">
 
-    <Button
-        android:id="@+id/taskButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="2dp"
-        android:layout_marginBottom="2dp"
-        android:text="Add Task"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+    </EditText>
+   <Button
+       android:id="@+id/taskButton"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintBottom_toBottomOf="parent"
+       android:text="New Task"
+       android:textColor="@color/light_gray"
 
-    <View
-        android:id="@+id/divider"
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginEnd="1dp"
-        android:background="?android:attr/listDivider"
-        android:backgroundTint="#3F51B5"
-        app:layout_constraintBottom_toTopOf="@+id/taskName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+       android:background="@color/idk"
+       >
+
+   </Button>
+
+
+
 
     <LinearLayout
         android:layout_width="409dp"
         android:layout_height="679dp"
         android:layout_marginStart="1dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="10dp"
         android:layout_marginBottom="1dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/divider"
+        app:layout_constraintBottom_toTopOf="@+id/taskButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        >
 
         <ListView
             android:id="@+id/taskListView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:layout_marginTop="50dp">
+
+
+        </ListView>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

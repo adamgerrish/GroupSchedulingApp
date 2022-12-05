@@ -65,7 +65,6 @@ public class TodoMain extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "Please enter a task", Toast.LENGTH_LONG).show();
         }
     }
+    }
 
 
-
-}
