@@ -15,6 +15,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Button todo_button = findViewById(R.id.button_todo);
         Button calendar_button = findViewById(R.id.button_calendar);
+        Button quoteButton = findViewById(R.id.quoteButton);
+        Button logoutButton = findViewById(R.id.button_2);
 
         todo_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -27,6 +29,21 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this,CalendarActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        quoteButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,QuoteActivity.class);
+                startActivity(intent);
+            }
+        });
+        logoutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,LoginActivity.class);
                 startActivity(intent);
             }
         });
